@@ -10,8 +10,7 @@ Capsule::schema()->create('users',function($table){
     $table->string('email')->unique();
     $table->string('passw');
     $table->string('phone');
-    $table->json('roles')->nullable();
-    $table->rememberToken();
+    $table->string('roles')->nullable();
     $table->timestamps();
 });
 
