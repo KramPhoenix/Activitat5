@@ -12,7 +12,10 @@ class User extends Model
     protected $attributes=[
         'roles'=>'client'
     ];
+
     public  function properties(){
         return $this->hasMany('Rentit\Models\Property');
     }
+
+
 }

@@ -25,7 +25,9 @@ final class UserController extends Controller
         $user = User::create([
             'email' => $email,
             'passw' => $passwd,
-            'phone' => $phone]);
+            'phone' => $phone
+        ]);
+
         return $user;
     }
 
@@ -56,11 +58,12 @@ final class UserController extends Controller
             $passwd2 = filter_input(INPUT_POST, 'passwd2', FILTER_SANITIZE_STRING);
             $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
             if ($passwd1 == $passwd2) {
+
                 $passwdhash = password_hash($passwd1, PASSWORD_ARGON2I);
                 try {
                     $user = $this->create_user($email, $passwdhash, $phone);
                     header('location:/');
-                } catch (\PDOException $e) {
+                } catch (\Exception $e) {
                     $this->error($e->getMessage());
                 }
             } else {

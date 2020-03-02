@@ -20,10 +20,12 @@ final class PropertyController extends Controller{
 
     private function create_property($title, $price, $desc)
     {
+
         $property = Property::create([
             'title' => $title,
             'price' => $price,
-            'description' => $desc]);
+            'description' => $desc,
+            'user_id' => 1]);
 
         return $property;
     }
