@@ -1,0 +1,25 @@
+
+section.sell{
+    display: flex;
+    justify-content: center;
+}
+
+section.sell form{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+section.sell form input{
+    margin-bottom: 1rem;
+}
+
+section.sell form label, p{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+section.sell form a{
+    color: blue;
+    font-weight: bold;
+}

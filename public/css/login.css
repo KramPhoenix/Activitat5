@@ -1,0 +1,25 @@
+
+section.login{
+    display: flex;
+    justify-content: center;
+}
+
+section.login form{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+section.login form input{
+    margin-bottom: 1rem;
+}
+
+section.login form label, p{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+section.login form a{
+    color: blue;
+    font-weight: bold;
+}

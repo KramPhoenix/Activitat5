@@ -1,0 +1,11 @@
+Options +FollowSymLinks
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+
+RewriteRule ^.*$ index.php [NC,L]
+
+#^desde el principio cualquier patron llevalo al index.php NC=not case L = LAST RULE
+
