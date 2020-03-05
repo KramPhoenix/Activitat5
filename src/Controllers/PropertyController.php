@@ -52,7 +52,7 @@ final class PropertyController extends Controller{
             $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
             try {
                 $property = $this->create_property($title, $price, $description);
-                header('location:/');
+                header('location:/property/myproperties');
             } catch (\PDOException $e) {
                 $this->error($e->getMessage());
             }
@@ -74,9 +74,11 @@ final class PropertyController extends Controller{
 
     public function edit(){
         $id = $_REQUEST['id'];
+        $property = Property::where('id', '=', $id)->first();
 
         $data = [
-            'id' => $id
+            'id' => $id,
+            'property' => $property
         ];
 
         $this->render($data, 'property_edit');

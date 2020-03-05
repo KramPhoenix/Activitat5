@@ -84,7 +84,7 @@ final class UserController extends Controller
                 $passwdhash = password_hash($passwd1, PASSWORD_ARGON2I);
                 try {
                     $user = $this->create_user($email, $passwdhash, $phone);
-                    header('location:/');
+                    header('location:/user/login');
                 } catch (\Exception $e) {
                     $this->error($e->getMessage());
                 }
