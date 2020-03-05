@@ -10,7 +10,7 @@ class User extends Model
     protected $fillable=['email','passw','phone'];
     //default values
     protected $attributes=[
-        'roles'=>'client'
+        'roles' => 'client'
     ];
 
     public  function properties(){

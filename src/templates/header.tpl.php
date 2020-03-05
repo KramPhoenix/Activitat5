@@ -12,7 +12,7 @@ use Rentit\Session;
         <link rel="stylesheet" type="text/css" href="/public/css/property.css">
         <link rel="stylesheet" type="text/css" href="/public/css/default.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <title>Rentit - Immobiliaria de Gava</title>
+        <title>Rentit - Inmobiliaria de Gava</title>
     </head>
 
     <body>
