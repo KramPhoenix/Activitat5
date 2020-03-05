@@ -42,10 +42,32 @@ final class UserController extends Controller
     }
 
     public function signin(){
-        if ($this->verifyToken($_POST['token'], 600)){
+       /* if ($this->verifyToken($_POST['token'], 600)){
 
-        }
+        }*/
+
+       if ( !empty($_REQUEST['email']) && !empty($_REQUEST['passwd'])){
+           $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+           $passwd = filter_input(INPUT_POST, 'passwd', FILTER_SANITIZE_STRING);
+
+           $user = User::where('email', '=', $email)->first();
+
+
+           if (!empty($user) && password_verify($passwd, $user->passw) == true){
+               session_start();
+               Session::set('username', $user->email);
+               Session::set('user', $user->id);
+               Session::set('logged', true);
+               header('location:/');
+           } else {
+
+              return $this->error("User or password doesn't match");
+           }
+       } else {
+           $this->error("Fill the form");
+       }
     }
+
     public function signup()
     {
         if (!empty($_REQUEST['email']) &&
@@ -71,6 +93,11 @@ final class UserController extends Controller
             }
         }
         $this->error("Fill the form");
+    }
+
+    public function destroy(){
+        session_destroy();
+        header('location:/');
     }
 
     public function json(array $dataview)

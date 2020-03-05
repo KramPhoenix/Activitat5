@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="687b5fa6-3264-4630-b8a0-69d4c77806e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/property.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/property.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/PropertyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/SchemaBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/SchemaBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Property.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Property.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/default.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/default.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/header.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/header.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/myproperties.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/myproperties.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/property.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/property.tpl.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/property_edit.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/property_edit.tpl.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lol/Practica5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -92,7 +97,9 @@
       <workItem from="1582566279459" duration="363000" />
       <workItem from="1582566961847" duration="108000" />
       <workItem from="1582814143210" duration="643000" />
-      <workItem from="1583170656249" duration="5877000" />
+      <workItem from="1583170656249" duration="6491000" />
+      <workItem from="1583335301742" duration="252000" />
+      <workItem from="1583351807523" duration="14173000" />
     </task>
     <servers />
   </component>
@@ -116,34 +123,34 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="450" y="312" width="523" height="168" key="ComposerInitDialogKey/67.27.1299.741@67.27.1299.741" timestamp="1583173079697" />
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1582820585547">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1583404200873">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1582820585547" />
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1582313460217">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1583404200873" />
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom" timestamp="1583177149500">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1582313460217" />
-    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1582313460216">
+    <state width="1253" height="175" key="GridCell.Tab.0.bottom/67.27.1299.741@67.27.1299.741" timestamp="1583177149500" />
+    <state width="1253" height="175" key="GridCell.Tab.0.center" timestamp="1583177149500">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1582313460216" />
-    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1582313460215">
+    <state width="1253" height="175" key="GridCell.Tab.0.center/67.27.1299.741@67.27.1299.741" timestamp="1583177149500" />
+    <state width="1253" height="175" key="GridCell.Tab.0.left" timestamp="1583177149499">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1582313460215" />
-    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1582313460216">
+    <state width="1253" height="175" key="GridCell.Tab.0.left/67.27.1299.741@67.27.1299.741" timestamp="1583177149499" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right" timestamp="1583177149500">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1582313460216" />
+    <state width="1253" height="175" key="GridCell.Tab.0.right/67.27.1299.741@67.27.1299.741" timestamp="1583177149500" />
     <state x="427" y="210" width="569" height="373" key="NewPhpClassDialog" timestamp="1581706898334">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="427" y="210" width="569" height="373" key="NewPhpClassDialog/67.27.1299.741@67.27.1299.741" timestamp="1581706898334" />
-    <state x="512" y="322" width="399" height="149" key="NewPhpFileDialog" timestamp="1583171905245">
+    <state x="512" y="322" width="399" height="149" key="NewPhpFileDialog" timestamp="1583423270109">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
-    <state x="512" y="322" width="399" height="149" key="NewPhpFileDialog/67.27.1299.741@67.27.1299.741" timestamp="1583171905245" />
+    <state x="512" y="322" width="399" height="149" key="NewPhpFileDialog/67.27.1299.741@67.27.1299.741" timestamp="1583423270109" />
     <state x="380" y="175" width="672" height="677" key="run.anything.popup" timestamp="1583172825654">
       <screen x="67" y="27" width="1299" height="741" />
     </state>

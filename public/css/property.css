@@ -1,0 +1,19 @@
+section.properties{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section.properties .property img{
+    width: 250px;
+    height: 250px;
+}
+
+section.properties .property{
+    display: flex;
+    flex-direction: column;
+}
+
+section.properties .property button{
+    justify-self: flex-end;
+}

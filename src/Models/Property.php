@@ -7,7 +7,7 @@ class Property extends Model
 {
     protected $table='properties';
 
-    protected $fillable=['title','price','description'];
+    protected $fillable=['title','price','description', 'user_id'];
 
     public function user(){
         return $this->belongsTo('Rentit\Models\User');

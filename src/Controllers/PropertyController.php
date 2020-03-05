@@ -4,6 +4,7 @@ namespace Rentit\Controllers;
 
 use Rentit\Controller;
 use Rentit\Models\Property;
+use Rentit\Session;
 
 final class PropertyController extends Controller{
 
@@ -14,25 +15,25 @@ final class PropertyController extends Controller{
 
     public function index()
     {
-        $data = ['title' => 'User'];
+        $properties = Property::all();
+
+        $data = [
+            'title' => 'User',
+            'properties' => $properties
+        ];
+
         $this->render($data);
     }
 
     private function create_property($title, $price, $desc)
     {
-
         $property = Property::create([
             'title' => $title,
             'price' => $price,
             'description' => $desc,
-            'user_id' => 1]);
+            'user_id' => Session::get('user')]);
 
         return $property;
-    }
-
-    public function buy()
-    {
-        $this->render(null, 'buy');
     }
 
     public function sell()
@@ -58,6 +59,52 @@ final class PropertyController extends Controller{
         } else {
             $this->error("Completa los campos del formulario");
         }
+    }
+
+    public function myproperties(){
+        $user = Session::get('user');
+        $properties = Property::where('user_id', '=', $user)->get();
+
+        $data = [
+          'properties' => $properties
+        ];
+
+        $this->render($data, 'myproperties');
+    }
+
+    public function edit(){
+        $id = $_REQUEST['id'];
+
+        $data = [
+            'id' => $id
+        ];
+
+        $this->render($data, 'property_edit');
+    }
+
+    public function update(){
+
+       $id = $_REQUEST['id'];
+       $property = Property::where('id', '=', $id)->first();
+
+       if (!empty($_REQUEST['nombre']) && !empty($_REQUEST['desc']) && !empty($_REQUEST['precio'])){
+
+           $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_STRING);
+           $descripcion = filter_input(INPUT_POST, 'desc', FILTER_SANITIZE_STRING);
+           $precio = filter_input(INPUT_POST, 'precio', FILTER_SANITIZE_STRING);
+
+           $data = [
+               'title' => $nombre,
+               'price' => $precio,
+               'description' => $descripcion
+           ];
+
+           $property->update($data);
+           header('location:/property/myproperties');
+
+       } else {
+           $this->error("Completa los campos del formulario");
+       }
     }
 
     public function json(array $dataview)
