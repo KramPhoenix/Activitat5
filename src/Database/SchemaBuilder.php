@@ -14,6 +14,7 @@ Capsule::schema()->create('users',function($table){
     $table->timestamps();
 });
 
+
 Capsule::schema()->create('properties',function($table){
     $table->increments('id');
     $table->string('title');
