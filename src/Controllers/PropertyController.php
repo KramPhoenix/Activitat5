@@ -109,6 +109,14 @@ final class PropertyController extends Controller{
        }
     }
 
+    public function remove(){
+        $id = $_REQUEST['id'];
+        $property = Property::where('id', '=', $id)->first();
+
+        $property->delete();
+        header('location:/property/myproperties');
+    }
+
     public function json(array $dataview)
     {
         // TODO: Implement json() method.

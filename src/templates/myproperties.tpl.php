@@ -15,6 +15,10 @@ include 'header.tpl.php';
                 <input type="hidden" name="id" value="<?php echo $property->id ?>">
                 <button type="submit">Edit</button>
             </form>
+            <form action="/property/remove" method="post">
+                <input type="hidden" name="id" value="<?php echo $property->id ?>">
+                <button type="submit">Remove</button>
+            </form>
         </div>
     <?php } ?>
 </section>
